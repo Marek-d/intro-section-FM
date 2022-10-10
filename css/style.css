@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 98%);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+header .ham-menu {
+    display: none;
+}
+
+/* 
+    DESKTOP version of navigation
+*/
+
+nav.desktop-nav {
+    margin-right: 28%;
+    color: hsl(0, 0%, 41%);
+}
+
+nav.desktop-nav .navigation {
+    display: flex;
+    margin-left: 2em;
+}
+
+nav.desktop-nav .navigation li {
+    list-style: none;
+}
+
+nav.desktop-nav .navigation > li {
+    margin-right: 2em;
+    min-width: 7em;
+}
+
+nav.desktop-nav .navigation .dropdown {
+    position: relative;
+}
+
+nav.desktop-nav .navigation .dropdown .select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+    width: 50%;
+}
+
+nav.desktop-nav .navigation .dropdown .select:hover,
+nav.desktop-nav .navigation li:nth-last-child(-n + 2):hover,
+nav.desktop-nav .navigation .dropdown .menu .list-item:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav.desktop-nav .navigation .dropdown .menu {
+    padding: 1em 1.3em;
+    background-color: white;
+    box-shadow: 0.6em 0.6em 1em rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    position: absolute;
+    top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+} 
+
+@keyframes fade-in-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 180deg;
+    }
+}
+
+nav.desktop-nav .navigation .dropdown .menu .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6em;
+    padding: 0.6em 0.2em;
+    width: max-content;
+}
+
+.register ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register ul li {
+    margin-right: 2em;
+    list-style-type: none;
+}
+
+.register ul li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+.register ul li a:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.register ul li:last-child a {
+    color:hsl(0, 0%, 8%);
+    border: solid 1px hsl(0, 0%, 8%);
+    padding: 0.5em 1em;
+    border-radius: 0.8em;
+}
+
+.register ul li:last-child a:hover {
+    border-width: 2px;
+}
+
+/* 
+    MAIN SECTIONS
+*/
+
+main {
+    display: flex;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+main .left-side {
+    padding: 11em 3em 0 8em;
+    flex: 50% 0 0;
+    text-align: left;
+}
+
+main .left-side h1 {
+    font-size: 4em;
+}
+
+main .left-side p {
+    margin-top: 3em;
+    color: hsl(0, 0%, 41%);
+    width: 70%;
+    line-height: 1.7em;
+}
+
+main .left-side button {
+    margin-top: 2em;
+    padding: 1.2em 2em;
+    color: hsl(0, 0%, 98%);
+    font-weight: 700;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+main .left-side button:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border: solid 1px hsl(0, 0%, 8%);
+}
+
+main .left-side .logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+}
+
+main .right-side {
+    flex: 50% 0 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .right-side .desktop-image {
+    width: 70%;
+    height: auto;
+}
+
+main .right-side .mobile-image {
+    display: none;
+}
+
+/* 
+    Added later in Javascript
+*/
+
+.caret-icon-rotate {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+nav .navigation .dropdown .menu.menu-open {
+    display: block;
+    animation: fade-in-show 0.3s; 
+}
+
+.hide {
+    display: none;
+}
+

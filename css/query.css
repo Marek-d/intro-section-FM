@@ -1,0 +1,128 @@
+@media only screen and (max-width: 668px) {
+    html {
+        position: relative;
+    }
+
+    main {
+        flex-direction: column-reverse;
+    }
+
+    header {
+        padding: 0 1em;
+    }
+
+    header .ham-menu {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: 1.5em;
+        left: 87%;
+    }
+
+    header .ham-menu img {
+        width: 100%;
+        animation: rotate 0.3s;
+    }
+
+    nav.desktop-nav {
+        display: none;
+    }
+
+    /* 
+        ADDED LATER IN JAVASCRIPT - MOBILE NAVIGATION MENU
+    */
+
+    nav.mobile-nav {
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 0;
+        height: 100%;
+        width: 60%;
+        animation: slidein 0.5s;
+    }
+
+    @keyframes slidein {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 60%;
+        }
+    }
+
+    nav.mobile-nav .navigation {
+        flex-direction: column;
+        margin-top: 30%;
+    }
+
+    nav.mobile-nav .navigation > li {
+        margin-top: 1.5em;
+    }
+
+    nav.mobile.nav .navigation .dropdown .select {
+        justify-content: flex-start;
+        gap: 1em;
+    }
+
+    nav.mobile-nav .navigation .dropdown .menu {
+        position: static;
+        transform: translateX(0);
+        box-shadow: none;
+    }
+
+    .register ul {
+        position: absolute;
+        top: 70%;
+        left: 40%;
+        transform: translateX(12.5%);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .register ul li {
+        margin-top: 2em;
+        margin-right: 0;
+    }
+
+    .register ul li:last-child a {
+        padding: 0.7em 4.5em;
+    }
+
+    /* LEFT/TOP SIDE OF PAGE */
+
+    main .left-side {
+        padding: 2em 0.8em;
+        text-align: center;
+    }
+
+    main .left-side h1 {
+        font-size: 2.5em;
+    }
+
+    main .left-side p {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    /* 
+        RIGHT/BOTTOM SIDE OF PAGE
+    */
+
+    main .right-side {
+        padding: 1.5em 0;
+    }
+
+    main .right-side .desktop-image {
+        display: none;
+    }
+
+    main .right-side .mobile-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
